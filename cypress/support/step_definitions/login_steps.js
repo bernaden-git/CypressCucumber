@@ -38,3 +38,12 @@ Then(`I should get the error message {string}`, (Message) => {
     cy.get(error_elm).contains(Message)
 });
 
+When(`I enter the username as {string}`, (Username) => {
+    const uname_elm = '#user-name'
+    cy.get(uname_elm).type(Username)
+});
+
+When(`I enter the password as {string}`, (Password) => {
+    const pwd_elm = '#password'
+    cy.get(pwd_elm).type(Password)
+});
